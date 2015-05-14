@@ -7,19 +7,15 @@
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
     <style type="text/css">
       .name {
-        font-size: 60px;
+        font-size: 80px;
       }
       
-      .description {
-        font-size: 20px;
-      }
     </style>
   </head>
   <body class="mixpanel-platform-body">
     <div class="wrapper">
       <div class="name"></div>
       <div class="picture"><img style="width: 800px; height: 800px;" /></div>
-      <div class="description"></div>
       <div class="time"></div>
     </div>
     <script>
@@ -62,9 +58,8 @@
         }
         
         item = feed[carouselIdx];
-        $('.name').text(item.user);
+        $('.name').text(item.user + " deployed " + item.description);
         $('.picture img').attr('src', pictures[item.user]);
-        $('.description').text(item.description);
         $('.time').text(item.ts);
       };
       
