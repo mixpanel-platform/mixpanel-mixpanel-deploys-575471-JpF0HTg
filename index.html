@@ -304,7 +304,7 @@ function timeConverter(UNIX_timestamp){
         }
         
         item = feed[carouselIdx];
-        $('.name').text(item.user + " deployed " + item.description + " - " + $.timeago(timeConverter(item.ts)));
+        $('.name').text(item.user + " deployed \"" + item.description + "\" " + $.timeago(timeConverter(item.ts)));
         $('.picture img').attr('src', pictures[item.user]);
       };
       
